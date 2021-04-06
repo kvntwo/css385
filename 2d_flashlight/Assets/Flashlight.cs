@@ -7,7 +7,7 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     private Mesh mesh;
     public float fov = 45f;
-    public float viewDistance = 200f;
+    private float viewDistance = 200f;
     public int rayCount = 100;
     private float startingAngle;
     public Camera camera;
@@ -23,23 +23,15 @@ public class Flashlight : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && viewDistance == 200)
         {
-            rayCount = 0;
-            
-            if(rayCount == 0)
-            {
-                rayCount = 100;
-            }
-            else if(rayCount == 100)
-            {
-                rayCount = 0;
-            }
-
-
+            viewDistance = 0;
         }
-
-
+        else if (Input.GetKeyDown(KeyCode.F) && viewDistance == 0)
+        {
+            viewDistance = 200;
+        }
+        
         Vector3 targetPosition = camera.ScreenToWorldPoint(Input.mousePosition);
 
         SetAimDirection(targetPosition);

@@ -6,6 +6,8 @@ public class Player : MonoBehaviour {
     private float speed = 7f;
     private Rigidbody2D rb2d;
     public Transform firePoint;
+    public Transform FP1;
+    public Transform FP2;
     public GameObject bulletPrefab;
     private float bulletSpeed = 10f;
     private float cooldown = 0.5f;
@@ -51,6 +53,17 @@ public class Player : MonoBehaviour {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D re = bullet.GetComponent<Rigidbody2D>();
         re.velocity = firePoint.up * bulletSpeed;
+        nextFire = Time.time + cooldown;
+      }
+
+      if ((Input.GetKey(KeyCode.Q)) && Time.time > nextFire * 1.5)
+      {
+        GameObject bullet1 = Instantiate(bulletPrefab, FP1.position,  FP1.rotation);
+        GameObject bullet2 = Instantiate(bulletPrefab, FP2.position, FP2.rotation);
+        Rigidbody2D re1 = bullet1.GetComponent<Rigidbody2D>();
+        Rigidbody2D re2 = bullet2.GetComponent<Rigidbody2D>();
+        re1.velocity = FP1.up * bulletSpeed;
+        re2.velocity = FP2.up * bulletSpeed;
         nextFire = Time.time + cooldown;
       }
     }
