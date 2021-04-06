@@ -22,6 +22,24 @@ public class Flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            rayCount = 0;
+            
+            if(rayCount == 0)
+            {
+                rayCount = 100;
+            }
+            else if(rayCount == 100)
+            {
+                rayCount = 0;
+            }
+
+
+        }
+
+
         Vector3 targetPosition = camera.ScreenToWorldPoint(Input.mousePosition);
 
         SetAimDirection(targetPosition);
