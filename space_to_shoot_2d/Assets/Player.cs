@@ -56,7 +56,7 @@ public class Player : MonoBehaviour {
         nextFire = Time.time + cooldown;
       }
 
-      if ((Input.GetKey(KeyCode.Q)) && Time.time > nextFire * 1.5)
+      if ((Input.GetKey(KeyCode.Q)) && Time.time > nextFire)
       {
         GameObject bullet1 = Instantiate(bulletPrefab, FP1.position,  FP1.rotation);
         GameObject bullet2 = Instantiate(bulletPrefab, FP2.position, FP2.rotation);
