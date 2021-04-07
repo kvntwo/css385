@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask platformsLayerMask;
 
     private int jumpCount;
-    public int jumpCountMax;
+    private int jumpCountMax;
 
     void Start()
     {
