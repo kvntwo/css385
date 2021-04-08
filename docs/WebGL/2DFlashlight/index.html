@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <configuration>
-    <system.webServer>
-       <staticContent>
-  
-          <mimeMap fileExtension=".unityweb" mimeType ="TYPE/SUBTYPE" />
-       </staticContent>
-    </system.webServer> 
- </configuration>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -37,9 +29,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/2DFlashlight.loader.js";
       var config = {
-        dataUrl: buildUrl + "/2DFlashlight.data",
-        frameworkUrl: buildUrl + "/2DFlashlight.framework.js",
-        codeUrl: buildUrl + "/2DFlashlight.wasm",
+        dataUrl: buildUrl + "/2DFlashlight.data.unityweb",
+        frameworkUrl: buildUrl + "/2DFlashlight.framework.js.unityweb",
+        codeUrl: buildUrl + "/2DFlashlight.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "2D Flash Light",
