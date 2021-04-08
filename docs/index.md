@@ -6,4 +6,4 @@
 This is my Github page where WebGL builds will go.
 WebGLs linked below!
 
-- [Flashlight with Toggle](./WebGL/2DFlashlight/index.html)
+- [Flashlight with Toggle](./Flashlight)
