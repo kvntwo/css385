@@ -14,9 +14,6 @@ public class HeroBehavior : MonoBehaviour
 
     public bool FollowMouse = true;
 
-    private float shotCD = 0.2f;
-    private float nextShot = 0f;
-
     private int planesTagged = 0;
     private GameControllerBehavior heroGC = null;
 
@@ -62,6 +59,7 @@ public class HeroBehavior : MonoBehaviour
             if(Input.GetKey(KeyCode.S))
             {
                 pos -= ((speed * Time.smoothDeltaTime) * transform.up);
+
             }
 
             if(Input.GetKey(KeyCode.D))
@@ -77,13 +75,12 @@ public class HeroBehavior : MonoBehaviour
         }
 
         //Shoot eggs with spacebar
-        if(Input.GetKeyDown(KeyCode.Space) && Time.time > nextShot)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             
             GameObject egg = Instantiate(Resources.Load("Prefabs/Egg") as GameObject); //Load egg
             egg.transform.localPosition = transform.localPosition;
             egg.transform.rotation = transform.rotation;
-            nextShot = Time.time + shotCD;
         
         }
 
