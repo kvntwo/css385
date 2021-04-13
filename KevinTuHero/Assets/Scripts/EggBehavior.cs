@@ -12,23 +12,24 @@ public class EggBehavior : MonoBehaviour
     {
         //Egg life count set to eggLife
         //eggLifeCount =  eggLife;
-    
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        //egg speed and the down tick of the egg's life
+        //egg speed
         transform.position += transform.up * (eggSpeed * Time.smoothDeltaTime);
 
     }
     
     //destroys eggs if the exit the world boundaries
-    void OnBecameInvisible() {
+    void OnBecameInvisible() 
+    {
 
-        Destroy(transform.gameObject);
-
+        Destroy(transform.gameObject);   
+        
     }    
-    
+
 }
