@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class EggBehavior : MonoBehaviour
 {
     public const float eggSpeed = 40f;
-    private bool isExpired = true;
 
     // Start is called before the first frame update
     void Start()
     {
         //Egg life count set to eggLife
         //eggLifeCount =  eggLife;
-        isExpired = false;
+    
     }
 
     // Update is called once per frame
@@ -29,16 +28,7 @@ public class EggBehavior : MonoBehaviour
     void OnBecameInvisible() {
 
         Destroy(transform.gameObject);
-        isExpired = true;
 
-    }
-
-    public bool getExpirition()
-    {
-
-        return isExpired;
-
-    }
-    
+    }    
     
 }
