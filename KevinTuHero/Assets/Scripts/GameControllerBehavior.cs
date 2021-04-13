@@ -8,8 +8,9 @@ public class GameControllerBehavior : MonoBehaviour
     public Text enemyAliveText = null;
     private int maxEnemies = 10;
     private int numOfEnemies = 0;
-
     private int aliveEnemies = 0;
+
+    private int eggHits = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +46,7 @@ public class GameControllerBehavior : MonoBehaviour
             enemy.transform.localPosition = pos;
             numOfEnemies++;
 
-        } 
-        
+        }        
         
     }
 
