@@ -9,6 +9,11 @@ public class HeroBehavior : MonoBehaviour
     public Text EnemyKilledText = null;
     public Text EggText = null;
 
+    //Egg cooldown should make it so that it shoots ever 0.2 secounds
+    private float eggCD = 0.2f;
+    private float eggFireTime = 0f;
+
+    //intial speed of 20/sec and turn rate of 45/sec
     public float speed = 20f;
     public float HeroRotateSpeed = 90f / 2;
 
@@ -22,7 +27,7 @@ public class HeroBehavior : MonoBehaviour
     {
        
         EggText.text = "Eggs on Screen: 0";
-        EnemyKilledText.text = "Planes Killed: 0";
+        EnemyKilledText.text = "Planes Touched: 0";
         heroGC = FindObjectOfType<GameControllerBehavior>();
 
     }
@@ -55,15 +60,16 @@ public class HeroBehavior : MonoBehaviour
             
             if(Input.GetKey(KeyCode.W))
             {
-                pos += ((speed * Time.smoothDeltaTime) * transform.up);
-            }
 
+                pos += ((speed * Time.smoothDeltaTime) * transform.up);
+
+            }
             if(Input.GetKey(KeyCode.S))
             {
+
                 pos -= ((speed * Time.smoothDeltaTime) * transform.up);
 
             }
-
             if(Input.GetKey(KeyCode.D))
             {
                 transform.Rotate(transform.forward, -HeroRotateSpeed * Time.smoothDeltaTime);
@@ -79,13 +85,14 @@ public class HeroBehavior : MonoBehaviour
         transform.position = pos;
 
         //Shoot eggs with spacebar
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && Time.time > eggFireTime)
         {
             
             GameObject egg = Instantiate(Resources.Load("Prefabs/Egg") as GameObject); //Load egg
             egg.transform.localPosition = transform.localPosition;
             egg.transform.rotation = transform.rotation;
-        
+            eggFireTime = Time.time + eggCD;
+
         }
 
         //These two lines will count the number of eggs on the screen
@@ -96,19 +103,24 @@ public class HeroBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-       //Debug.Log("Hit");
-        planesTagged++;
-        EnemyKilledText.text = "Planes Tagged: " + planesTagged;
-        Destroy(collision.gameObject);
-        heroGC.EnemyDestroyed();
+        //checks to see if tag of sprite is an egg or not
+        if(collision.gameObject.tag != "Bullet")
+        {
+            //Debug.Log("Hit");
+            planesTagged++;
+            EnemyKilledText.text = "Planes Touched: " + planesTagged;
+            Destroy(collision.gameObject);
+            heroGC.EnemyDestroyed();
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
 
         //Debug.Log("Stay");
-
+        
+        
     }
 
 
