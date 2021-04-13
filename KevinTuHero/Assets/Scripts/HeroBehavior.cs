@@ -45,7 +45,9 @@ public class HeroBehavior : MonoBehaviour
         if(FollowMouse)
         {
             pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //Debug.Log("Position is " + pos);
             pos.z = 0f;
+            //Debug.Log("Screen Point:" + Input.mousePosition);
 
         }
         else
@@ -74,6 +76,8 @@ public class HeroBehavior : MonoBehaviour
 
         }
 
+        transform.position = pos;
+
         //Shoot eggs with spacebar
         if(Input.GetKeyDown(KeyCode.Space))
         {
@@ -88,7 +92,6 @@ public class HeroBehavior : MonoBehaviour
         getCount = GameObject.FindGameObjectsWithTag("Bullet");
         EggText.text = "Eggs on Screen: " + getCount.Length;
 
-       transform.position = pos;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

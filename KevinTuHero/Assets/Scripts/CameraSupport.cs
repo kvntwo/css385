@@ -14,8 +14,8 @@ public class CameraSupport : MonoBehaviour
     {
         mCamera = gameObject.GetComponent<Camera>();
         mWorldBoundary = new Bounds();
-        float maxY = mCamera.orthographicSize;
-        float maxX = mCamera.orthographicSize * mCamera.aspect;
+        float maxY = mCamera.orthographicSize - 10;
+        float maxX = (mCamera.orthographicSize - 10) * mCamera.aspect;
         float sizeX = 2 * maxX;
         float sizeY = 2 * maxY;
         Vector3 c = mCamera.transform.position;

@@ -6,6 +6,7 @@
 This is my Github page where WebGL builds will go.
 WebGLs linked below!
 
+- [Hero Assignment](./WebGL/Hero)
 - [Flashlight with Toggle](./WebGL/2DFlashlight)
 - [2D Direction with Diagonal Movement](./WebGL/DiagonalDirection)
 - [Q to shoot](./WebGL/SpaceToShoot)
