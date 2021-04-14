@@ -10,12 +10,12 @@ public class GameControllerBehavior : MonoBehaviour
     private int numOfEnemies = 0;
     private int aliveEnemies = 0;
 
-    private int eggHits = 0;
-
     // Start is called before the first frame update
     void Start()
     {
+
         enemyAliveText.text = "Enemy Alive: ";
+
     }
 
     // Update is called once per frame
@@ -36,6 +36,7 @@ public class GameControllerBehavior : MonoBehaviour
             CameraSupport s = Camera.main.GetComponent<CameraSupport>();
 
             GameObject enemy = Instantiate(Resources.Load("Prefabs/Enemy") as GameObject);
+        
             aliveEnemies++;
             enemyAliveText.text = "Enemy Alive: "  + aliveEnemies;
         
@@ -58,5 +59,5 @@ public class GameControllerBehavior : MonoBehaviour
         enemyAliveText.text = "Enemy Alive: "  + aliveEnemies;
 
     }
-
+    
 }

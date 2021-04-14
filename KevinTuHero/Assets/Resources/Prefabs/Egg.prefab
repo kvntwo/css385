@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8965911448820446289}
   - component: {fileID: 734627834029702069}
   - component: {fileID: 3501416346112061325}
-  - component: {fileID: -4320636493012420549}
+  - component: {fileID: 2068355782574663147}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Bullet
@@ -123,7 +123,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.14, y: 1.44}
   m_EdgeRadius: 0
---- !u!50 &-4320636493012420549
+--- !u!50 &2068355782574663147
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -137,7 +137,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
