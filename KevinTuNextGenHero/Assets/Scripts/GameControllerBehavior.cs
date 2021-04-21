@@ -35,7 +35,7 @@ public class GameControllerBehavior : MonoBehaviour
 
             CameraSupport s = Camera.main.GetComponent<CameraSupport>();
 
-            GameObject enemy = Instantiate(Resources.Load("Prefabs/Enemy") as GameObject);
+            GameObject enemy = Instantiate(Resources.Load("Prefabs/WhitePlane") as GameObject);
         
             aliveEnemies++;
             enemyAliveText.text = "Enemy Alive: "  + aliveEnemies;
@@ -47,8 +47,10 @@ public class GameControllerBehavior : MonoBehaviour
             enemy.transform.localPosition = pos;
             numOfEnemies++;
 
-        }        
-        
+        } 
+
+
+
     }
 
     public void EnemyDestroyed()
@@ -60,4 +62,11 @@ public class GameControllerBehavior : MonoBehaviour
 
     }
     
+    public void enemyMovement(GameObject gc)
+    {
+
+
+    }
+
+
 }

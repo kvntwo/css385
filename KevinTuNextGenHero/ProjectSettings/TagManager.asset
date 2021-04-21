@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Waypoint A
+  - Waypoint B
+  - Waypoint C
+  - Waypoint D
+  - Waypoint E
+  - Waypoint F
+  - Waypoint
   layers:
   - Default
   - TransparentFX

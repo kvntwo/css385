@@ -104,7 +104,7 @@ public class HeroBehavior : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //checks to see if tag of sprite is an egg or not
-        if(collision.gameObject.tag != "Bullet")
+        if(collision.gameObject.tag == "Enemy")
         {
             //Debug.Log("Hit");
             planesTagged++;
