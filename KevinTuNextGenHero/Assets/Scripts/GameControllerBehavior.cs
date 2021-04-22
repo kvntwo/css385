@@ -47,9 +47,7 @@ public class GameControllerBehavior : MonoBehaviour
             enemy.transform.localPosition = pos;
             numOfEnemies++;
 
-        } 
-
-
+        }   
 
     }
 
@@ -62,11 +60,5 @@ public class GameControllerBehavior : MonoBehaviour
 
     }
     
-    public void enemyMovement(GameObject gc)
-    {
-
-
-    }
-
 
 }

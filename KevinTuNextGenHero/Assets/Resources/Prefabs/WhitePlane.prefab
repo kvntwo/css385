@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1773566355846276715}
   - component: {fileID: 1493621436962460635}
   - component: {fileID: 4767558585585882071}
+  - component: {fileID: -1594960912739413378}
   m_Layer: 0
   m_Name: WhitePlane
   m_TagString: Enemy
@@ -110,6 +111,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.61, y: 1.89}
   m_EdgeRadius: 0
+--- !u!114 &-1594960912739413378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3531554385861259782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c5e8ba8397dd34685ab001b8588494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 3259429066356945544, guid: a2b759b51b706154f9176bf90ffe95b4, type: 3}
+  - {fileID: 8064544469312053021, guid: 083a4e33fe493444d964f6f2f5509b27, type: 3}
+  - {fileID: 1421219580704652634, guid: 6cf4da6867da8674da7d695116e9e7fc, type: 3}
+  - {fileID: 4006793919091438443, guid: da1c8efdba737224a80292cd6a642bbf, type: 3}
+  - {fileID: 950828988993557110, guid: 9eeaa2035658f2b44b9c17b3f9c83a84, type: 3}
+  - {fileID: 5368533483718588347, guid: 12a25b050170e9746a219af045198729, type: 3}
+  speed: 20
 --- !u!1 &8404929490643501142
 GameObject:
   m_ObjectHideFlags: 0
