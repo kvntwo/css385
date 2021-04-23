@@ -35,7 +35,7 @@ public class GameControllerBehavior : MonoBehaviour
 
             CameraSupport s = Camera.main.GetComponent<CameraSupport>();
 
-            GameObject enemy = Instantiate(Resources.Load("Prefabs/WhitePlane") as GameObject);
+            GameObject enemy = Instantiate(Resources.Load("Prefabs/NextGenEnemy") as GameObject);
         
             aliveEnemies++;
             enemyAliveText.text = "Enemy Alive: "  + aliveEnemies;

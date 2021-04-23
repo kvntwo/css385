@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4767558585585882071}
   - component: {fileID: -1594960912739413378}
   m_Layer: 0
-  m_Name: WhitePlane
+  m_Name: NextGenEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3531554385861259782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 507.0762, y: 288.9426, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 7762254358838773521}
   m_Father: {fileID: 0}
@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4ea300645db5264e84ea36a0df49381, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b07cde60b4c62b441a467019660f0702, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,8 +102,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.61, y: 1.89}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -123,14 +123,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75c5e8ba8397dd34685ab001b8588494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 3259429066356945544, guid: a2b759b51b706154f9176bf90ffe95b4, type: 3}
-  - {fileID: 8064544469312053021, guid: 083a4e33fe493444d964f6f2f5509b27, type: 3}
-  - {fileID: 1421219580704652634, guid: 6cf4da6867da8674da7d695116e9e7fc, type: 3}
-  - {fileID: 4006793919091438443, guid: da1c8efdba737224a80292cd6a642bbf, type: 3}
-  - {fileID: 950828988993557110, guid: 9eeaa2035658f2b44b9c17b3f9c83a84, type: 3}
-  - {fileID: 5368533483718588347, guid: 12a25b050170e9746a219af045198729, type: 3}
-  speed: 20
 --- !u!1 &8404929490643501142
 GameObject:
   m_ObjectHideFlags: 0

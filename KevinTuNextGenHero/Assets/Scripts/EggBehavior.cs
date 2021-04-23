@@ -76,6 +76,7 @@ public class EggBehavior : MonoBehaviour
                 Destroy(transform.gameObject);
                 Destroy(col.gameObject);
                 eggWB.checkWaypoint(col.gameObject);
+                eggWB.randomRespawn();
                 waypointEggHits = 0;
 
             }
