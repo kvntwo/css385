@@ -6,7 +6,7 @@
 This is my Github page where WebGL builds will go.
 WebGLs linked below!
 
-- [Next Gen Hero Assignment])(./WebGL/NextGenHero)
+- [Next Gen Hero Assignment](./WebGL/NextGenHero)
 - [Hero Assignment](./WebGL/Hero)
 - [Flashlight with Toggle](./WebGL/2DFlashlight)
 - [2D Direction with Diagonal Movement](./WebGL/DiagonalDirection)
