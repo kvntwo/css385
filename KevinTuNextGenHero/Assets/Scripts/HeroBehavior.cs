@@ -34,8 +34,8 @@ public class HeroBehavior : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-                   
+    {  
+
         //Switches movement from WASD to mouse
         if(Input.GetKeyDown(KeyCode.M))
         {
