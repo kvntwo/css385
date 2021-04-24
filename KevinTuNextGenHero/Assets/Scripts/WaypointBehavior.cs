@@ -21,7 +21,7 @@ public class WaypointBehavior : MonoBehaviour
     void Start()
     {
         //I wanted to make it so that all waypoints begin in a random location
-        startSpawn();
+        setSpawn();
 
     }
 
@@ -95,6 +95,31 @@ public class WaypointBehavior : MonoBehaviour
 
         }
 
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+
+            resetSpawns();
+
+        }
+
+    }
+
+    public void resetSpawns()
+    {
+        Destroy(WaypointA);
+        wayA--;
+        Destroy(WaypointB);
+        wayB--;
+        Destroy(WaypointC);
+        wayC--;
+        Destroy(WaypointD);
+        wayD--;
+        Destroy(WaypointE);
+        wayE--;
+        Destroy(WaypointF);
+        wayF--;
+        setSpawn();
+
     }
 
     public void randomRespawn()
@@ -120,7 +145,7 @@ public class WaypointBehavior : MonoBehaviour
 
     }
 
-    public void startSpawn()
+    public void setSpawn()
     {
         //Waypoint A starting position
         aPos.x = Random.Range(-180, 180);
