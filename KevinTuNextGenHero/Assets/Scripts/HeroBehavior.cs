@@ -11,7 +11,9 @@ public class HeroBehavior : MonoBehaviour
 
     //Egg cooldown should make it so that it shoots ever 0.2 secounds
     private float eggCD = 0.2f;
+    private bool eggReady;
     private float eggFireTime = 0f;
+    public Slider eggSlider;
 
     //intial speed of 20/sec and turn rate of 45/sec
     public float speed = 20f;
@@ -25,7 +27,7 @@ public class HeroBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+      
         EggText.text = "Eggs on Screen: 0";
         EnemyKilledText.text = "Planes Touched: 0";
         heroGC = FindObjectOfType<GameControllerBehavior>();
@@ -81,17 +83,32 @@ public class HeroBehavior : MonoBehaviour
             }
 
         }
-
         transform.position = pos;
+        
+        if(eggFireTime >= eggCD)
+        {
+
+            eggReady = true;
+
+        }
+        else
+        {
+
+            eggReady = false;
+            eggFireTime += Time.deltaTime;
+            eggFireTime = Mathf.Clamp(eggFireTime, 0.0f, eggCD);
+    
+        }
+
+        eggSlider.value = eggFireTime / eggCD;
 
         //Shoot eggs with spacebar
-        if(Input.GetKeyDown(KeyCode.Space) && Time.time > eggFireTime)
+        if(Input.GetKeyDown(KeyCode.Space) && eggReady)
         {
-            
+            eggFireTime = 0.0f;
             GameObject egg = Instantiate(Resources.Load("Prefabs/Egg") as GameObject); //Load egg
             egg.transform.localPosition = transform.localPosition;
             egg.transform.rotation = transform.rotation;
-            eggFireTime = Time.time + eggCD;
 
         }
 
@@ -114,14 +131,5 @@ public class HeroBehavior : MonoBehaviour
         }
 
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-
-        //Debug.Log("Stay");
-        
-        
-    }
-
 
 }
